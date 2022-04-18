@@ -1,0 +1,70 @@
+
+
+\documentclass[11pt,oneside,a4paper]{book}  % article ctexart book
+\input{setup/configuration} % configuration tex file
+\makeindex % 开启索引的收集 
+\graphicspath{figures/} % figures path
+
+
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% coverpage && copyright 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{setup/coverpage-rice}
+\input{setup/coverpage-ustc}
+\input{setup/copyright}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% abstract && acknowledgments && contents && figures && tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\input{chapters/abstract}
+\input{chapters/acknowledgments}
+
+\tableofcontents
+
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% chapters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\input{chapters/homework-1}
+\input{chapters/homework-2}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% bib && appendices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\bibliography{bib/homework} % 定义参考文献文件
+\addcontentsline{toc}{part}{Bibliography}
+
+\appendix
+\cleardoublepage
+\addcontentsline{toc}{part}{Appendices}
+\input{chapters/appendix}
+
+
+\end{document}

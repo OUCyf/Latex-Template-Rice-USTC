@@ -1,0 +1,52 @@
+#
+# Build the cv
+#
+name: Build
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install TinyTeX
+        run: |
+          make install_tex
+          echo "${HOME}/bin" >> $GITHUB_PATH
+
+      # NOTE: Python is necessary for Pygments step
+      - name: Install python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+        run: pip install Pygments
+
+      - name: Install LaTeX packages
+        run: make install_packages
+
+      - name: Build Template
+        run: make all
+
+      - name: Prepare files for gh-pages
+        run: |
+          mkdir public
+          mv main.pdf public/main.pdf
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.event_name == 'push'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          force_orphan: true

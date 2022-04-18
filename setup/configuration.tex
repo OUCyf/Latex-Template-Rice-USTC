@@ -1,0 +1,234 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  1. Package
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{ctex} % chinese
+\usepackage{geometry}
+\usepackage{fancyhdr} % header and footer
+\usepackage{graphicx} % insert fig
+\usepackage{pdfpages} % insert pdf
+\usepackage{multicol} % muti-column
+\usepackage{multirow} 
+\usepackage{setspace} % line spacing
+\usepackage{makeidx} % index
+\usepackage{tikz} % plot env
+\usepackage{indentfirst} % \chapter、\section indentation for the first line
+\usepackage{caption,subcaption}  % title and subtitle
+\usepackage{amsmath,amsthm,amssymb,amsfonts,mathrsfs} % math
+\usepackage{siunitx}  % SI unit
+\usepackage{pifont} % special symbol
+\usepackage{hyperref} % link
+\usepackage{cleveref}
+\usepackage{booktabs} % three line table
+\usepackage{tabularx} % three line table
+\usepackage{longtable}
+\usepackage[ruled,linesnumbered]{algorithm2e}  % algorithm
+\usepackage[shortlabels]{enumitem} % list env
+\usepackage{xcolor} % font color
+\usepackage{graphbox} % figure position
+\usepackage{minted} % code style
+% \usepackage{listings} % code style (not recommended)
+\usepackage{environ}
+\usepackage{mdframed}
+
+\usepackage[round]{natbib} % bib - authoryear
+\bibliographystyle{plainnat} %  plainnat
+
+% \usepackage{titlesec}    % Remove the text 'Chapter' from each chapter.
+% \titleformat{\chapter}{\normalfont\huge\bf}{\thechapter}{20pt}{\huge\bf}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  2. Page Setting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% margin
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% footer and header
+\pagestyle{fancy}
+\fancyfoot[C]{\thepage}
+
+% spaing
+\linespread{1.2}  % line spacing || 1.2 times font size
+\setlength{\parindent}{2em} % indentation for the first line
+\setlength{\parskip}{1ex} % spacing for each paragraph
+
+% link color
+\hypersetup{
+    colorlinks = true,
+    citecolor = blue, % References
+    linkcolor = black,
+    filecolor = magenta,
+    urlcolor = {blue!40!black},
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  3. Plot Env
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetikzlibrary{trees,positioning,fit,calc}
+\tikzset{block/.style = {draw, fill=blue!20, rectangle,
+                         minimum height=3em, minimum width=4em},
+        input/.style = {coordinate},
+        output/.style = {coordinate}
+}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  4. Question Env
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{problem}[2][Problem]
+    {\begin{mdframed}[backgroundcolor=gray!10] \textbf{#1 #2} \\}
+    {\end{mdframed}}
+
+\newenvironment{solution}{\textbf{Solution}}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     5. Code Env || use 'minted' and 'pygments'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usemintedstyle{vs}  % minted code style refer to https://pygments.org/styles/
+
+% mathescape 允许代码段中插入公式
+% linenos 代码行数
+% numbersep 设置行号和行首的间距
+% breaklines 自动折断换行
+% bgcolor 背景色
+% frame 设置代码周围的线
+% framerule 设置框线的宽度
+% framesep 设置框线与内容的间距
+
+\newminted{python}{
+    mathescape,
+    linenos=true, 
+    breaklines=true,
+    bgcolor=gray!10,
+    numbersep=5pt,
+    frame=lines,
+    framesep=2mm,
+}
+
+\newmintedfile{python}{
+    mathescape,
+    linenos=true, 
+    breaklines=true,
+    bgcolor=gray!10,
+    numbersep=5pt,
+    frame=lines,
+    framesep=2mm,
+}
+
+\newminted{julia}{
+    mathescape,
+    linenos=true, 
+    breaklines=true,
+    bgcolor=gray!10,
+    numbersep=5pt,
+    frame=lines,
+    framesep=2mm,
+}
+
+\newmintedfile{julia}{
+    mathescape,
+    linenos=true, 
+    breaklines=true,
+    bgcolor=gray!10,
+    numbersep=5pt,
+    frame=lines,
+    framesep=2mm,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% listing package is not recommended now, showing below
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lstset{
+%     basicstyle          =   {\small\ttfamily},
+%     keywordstyle        =   \bfseries,
+%     commentstyle        =   \rmfamily\itshape,
+%     stringstyle         =   \ttfamily,
+%     flexiblecolumns,
+%     numbers             =   none,
+%     showspaces          =   false,
+%     numberstyle         =   \small\ttfamily,
+%     showstringspaces    =   false,
+%     captionpos          =   t,
+%     frame               =   tb,
+% }
+
+% \lstdefinestyle{Python}{
+%     language        =   Python,
+%     keywordstyle    =   \color{blue},
+%     keywordstyle    =   [2] \color{teal},
+%     stringstyle     =   \color{magenta},
+%     commentstyle    =   \color{gray}\ttfamily,
+%     breaklines      =   true,
+%     columns         =   fixed,
+%     basewidth       =   0.5em,
+% }
+
+% \lstdefinelanguage{Julia}%
+%   {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
+%       end,export,false,for,function,immutable,import,importall,if,in,%
+%       macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+%       using,while},%
+%    sensitive=true,%
+%    alsoother={$},%
+%    morecomment=[l]\#,%
+%    morecomment=[n]{\#=}{=\#},%
+%    morestring=[s]{"}{"},%
+%    morestring=[m]{'}{'},%
+% }[keywords,comments,strings]%
+
+% \lstdefinestyle{Julia}{
+%     language        =   Julia,
+%     keywordstyle    =   \color{blue},
+%     keywordstyle    =   [2] \color{teal},
+%     stringstyle     =   \color{magenta},
+%     commentstyle    =   \color{gray}\ttfamily,
+%     breaklines      =   true,
+%     columns         =   fixed,
+%     basewidth       =   0.5em,
+% }
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  6. Fig Env
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\captionsetup[figure]{
+  labelfont={bf},
+  labelformat={default},
+  name={Figure.},
+  labelsep=colon
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 7. Footnote Env
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \interfootnotelinepenalty=10000 % 禁止脚注显示在第二页
+% % redefine footnote as circled number: ①②③④⑤⑥⑦⑧⑨
+% \renewcommand{\thefootnote}{\ding{\numexpr171+\value{footnote}}}
+
+
+
+
+
+

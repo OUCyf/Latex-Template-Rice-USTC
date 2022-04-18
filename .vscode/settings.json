@@ -1,0 +1,88 @@
+{
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.intellisense.unimathsymbols.enabled": true,
+    "latex-workshop.latex.build.forceRecipeUsage": true,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-shell-escape",  // use pygments to highlight syntax code
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+
+    // "latex-workshop.latex.tools": [
+    //     {
+    //         "name": "xelatex",
+    //         "command": "xelatex",
+    //         "args": [
+    //             "-shell-escape",  // use pygments to highlight syntax code
+    //             "-synctex=1",
+    //             "-interaction=nonstopmode",
+    //             "-file-line-error",
+    //             "%DOCFILE%"
+    //         ]
+    //     },
+    //     {
+    //         "name": "latexmk -xelatex",
+    //         "command": "latexmk",
+    //         "args": [
+    //             "-xelatex",
+    //             "-file-line-error",
+    //             "-halt-on-error",
+    //             "-interaction=nonstopmode",
+    //             "-synctex=1",
+    //             "-pv-",
+    //             "-pvc-",
+    //             "-outdir=%OUTDIR%",
+    //             "%DOCFILE%"
+    //         ],
+    //         "env": {}
+    //     }
+    // ]
+}
