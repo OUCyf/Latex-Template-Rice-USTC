@@ -24,9 +24,10 @@ install_tex:
 	curl -sL "https://yihui.org/tinytex/install-bin-unix.sh" | sh
 
 install_packages:
-	tlmgr install ctex geometry fancyhdr graphicx pdfpages multicol
-		setspace makeidx tikz indentfirst caption subcaption
-		amsmath amsthm amssymb amsfonts mathrsfs siunitx pifont
-		hyperref cleveref booktabs tabularx longtable algorithm2e
-		enumitem xcolor graphbox minted listings environ mdframed
+	tlmgr update --self
+	tlmgr install ctex geometry fancyhdr graphicx pdfpages multicol \
+		setspace makeidx tikz indentfirst caption subcaption \
+		amsmath amsthm amssymb amsfonts mathrsfs siunitx pifont \
+		hyperref cleveref booktabs tabularx longtable algorithm2e \
+		enumitem xcolor graphbox minted listings environ mdframed \
 		natbib titlesec
