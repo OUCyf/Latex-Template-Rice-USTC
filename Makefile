@@ -25,7 +25,7 @@ install_tex:
 
 install_packages:
 	tlmgr update --self
-	tlmgr install minted 
+	tlmgr install minted ctex geometry fancyhdr graphicx pdfpages multicol multirow
 # ctex geometry fancyhdr graphicx pdfpages multicol multirow\
 # 		setspace makeidx tikz indentfirst caption subcaption \
 # 		amsmath amsthm amssymb amsfonts mathrsfs siunitx pifont \
