@@ -1,6 +1,10 @@
 # MacOS junk
 *.DS_Store
 
+main.pdf
+main.gif
+
+
 # pygments
 _minted-main/
 

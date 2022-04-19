@@ -17,7 +17,11 @@ Download template PDF:
 - [main.pdf](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf)
 
 ---
-![img](./main.png)
+![img](https://github.com/OUCyf/Latex-Template-Rice-USTC/blob/75af332dbee865777ac594d018af26b37f9fd921/main.gif)
+
+yes
+
+![img2](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.gif)
 
 ---
 
