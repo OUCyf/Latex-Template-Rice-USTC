@@ -20,9 +20,13 @@ clean:
 	rm -r *.bbl
 
 gif:
-	convert -density 600 main.pdf -strip -resize @1048576 PNG8:main-%02d.png
+	convert -density 600 main.pdf -background white -alpha background -alpha off -strip -resize @1048576 PNG8:main-%02d.png
 	convert -layers OptimizePlus -delay 75 -loop 0 main-*.png  main.gif
 	rm -r main-*.png
+
+# convert -density 600 main.pdf -strip -resize @1048576 PNG8:main-%02d.png
+# convert -layers OptimizePlus -delay 75 -loop 0 main-*.png  main.gif
+# rm -r main-*.png
 
 ### tlmgr may install some package unsuccessfully, so is not recommended.
 # install_tex:
