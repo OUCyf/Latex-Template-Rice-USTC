@@ -23,7 +23,7 @@ Download template PDF:
 
 ## Build
 
-To build the template, you need to have **LaTeX** installed. The full LaTeX distribution (e.g., [TeXLive](https://www.tug.org/texlive/) on Linux or [MacTeX](https://www.tug.org/mactex/) on macOS)(>5 GB) are recommended in this template. Install LaTeX via [TexLive](https://github.com/scottkosty/install-tl-ubuntu), and via [MacTex](https://www.tug.org/mactex/).
+To build the template, you need to have **LaTeX** installed. The full LaTeX distribution are recommended in this template, and install LaTeX via [TexLive](https://github.com/scottkosty/install-tl-ubuntu) on Linux, and via [MacTex](https://www.tug.org/mactex/) on macOS.
 
 We also used `minted` latex package to highlight code, which depended on the [Pygments](https://pygments.org/) (a python package) installed firstly
 
@@ -48,22 +48,16 @@ $ make
 
     .
     ├── ...
-    │
     ├── .vscode                      # Compile via vscode
-    │
     ├── Makefile                     # Compile via makefile
-    │
     ├── main.tex                     # Main file
-    │
     ├── bib
     │   └── homework.bib             # Reference
-    │
     ├── setup                        # Coverpage and configuration files
     │   └── copyright.tex
     │   └── configuration.tex
     │   └── coverpage-rice.tex
     │   └── coverpage-ustc.tex
-    │
     ├── chapters                     # Other files
     │   └── abstract.tex
     │   └── acknowledgments.tex
@@ -71,7 +65,6 @@ $ make
     │   └── homework-2.tex
     │   └── ...
     │   └── appendix.tex
-    │
     └── figures                      # Figures used in chapters's tex files
 
 ## Acknowledgemnt

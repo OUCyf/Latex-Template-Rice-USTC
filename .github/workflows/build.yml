@@ -32,20 +32,18 @@ jobs:
         with:
           run: |
             apk add make
-            make all
+            make
 
       # - name: Install TinyTeX
       #   run: |
       #     make install_tex
       #     echo "${HOME}/bin" >> $GITHUB_PATH
 
-      
-
       # - name: Install LaTeX packages
       #   run: make install_packages
 
       # - name: Build Template
-      #   run: make all
+      #   run: make
 
       - name: Prepare files for gh-pages
         run: |
