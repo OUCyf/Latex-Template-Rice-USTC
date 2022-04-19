@@ -6,34 +6,18 @@ Please feel free to use this template for your reports.
 
 ## Download
 
-Click `Use this template`, and then git clone in your repo.
+Click [`Use this template`](https://github.com/OUCyf/Latex-Template-Rice-USTC/generate) to generate your own template, and then git clone from your own repo.
 
 ```bash
 $ git clone git@github.com:OUCyf/Latex-Template-Rice-USTC.git
 ```
 
 Download template PDF:
- 
-
 
 - [main.pdf](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf)
 
-![img](./main.png)
-![img](./logo.gif)
-
 ---
-
-<object data="https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf" width="1000" height="1000" type='application/pdf'></object>
-
-<!-- 
-[embed]https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf[/embed]
-
-<object data="https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf">Download PDF</a>.</p>
-    </embed>
-</object> 
--->
+![img](./main.png)
 
 ---
 
@@ -57,18 +41,39 @@ $ make
 
 3. Build via VSCode:
 
-   Please check `latex-workshop.latex.tools` and `latex-workshop.latex.recipes` options in `.vscode/settings.json` file.
+   Please check **latex-workshop.latex.tools** and **latex-workshop.latex.recipes** options in `.vscode/settings.json` file.
 
 
 ## Directory structure
 
     .
     ├── ...
-    ├── jl                      # Julia framework script files
-    ├── tex                     # LaTeX files (main and preamble files)
-    │   └── slides              # LaTeX files (specifically for slides)
-    └── output                  # Generated output file (.aux files, etc)
+    │
+    ├── .vscode                      # Compile via vscode
+    │
+    ├── Makefile                     # Compile via makefile
+    │
+    ├── main.tex                     # Main file
+    │
+    ├── bib
+    │   └── homework.bib             # Reference
+    │
+    ├── setup                        # Coverpage and configuration files
+    │   └── copyright.tex
+    │   └── configuration.tex
+    │   └── coverpage-rice.tex
+    │   └── coverpage-ustc.tex
+    │
+    ├── chapters                     # Other files
+    │   └── abstract.tex
+    │   └── acknowledgments.tex
+    │   └── homework-1.tex
+    │   └── homework-2.tex
+    │   └── ...
+    │   └── appendix.tex
+    │
+    └── figures                      # Figures used in chapters's tex files
 
 ## Acknowledgemnt
 
-The template refer to [Karolinska Institutet](https://www.overleaf.com/latex/templates/thesis-template-masters-health-informatics-ki-su/dpyvvsqhygng).
+The template refer to [Karolinska Institutet.](https://www.overleaf.com/latex/templates/thesis-template-masters-health-informatics-ki-su/dpyvvsqhygng)
