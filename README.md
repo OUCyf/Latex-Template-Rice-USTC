@@ -13,8 +13,13 @@ $ git clone git@github.com:OUCyf/Latex-Template-Rice-USTC.git
 ```
 
 Download template PDF:
+ 
+
 
 - [main.pdf](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf)
+
+![img](./main.png)
+
 
 ---
 
