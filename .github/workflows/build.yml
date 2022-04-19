@@ -17,10 +17,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install TinyTeX
-        run: |
-          make install_tex
-          echo "${HOME}/bin" >> $GITHUB_PATH
+      - name: Install Tex
+        uses: xu-cheng/latex-action@v2
+
+      # - name: Install TinyTeX
+      #   run: |
+      #     make install_tex
+      #     echo "${HOME}/bin" >> $GITHUB_PATH
 
       # NOTE: Python is necessary for Pygments step
       - name: Install python
@@ -31,8 +34,8 @@ jobs:
       - name: Install pygments
         run: pip install Pygments
 
-      - name: Install LaTeX packages
-        run: make install_packages
+      # - name: Install LaTeX packages
+      #   run: make install_packages
 
       - name: Build Template
         run: make all
