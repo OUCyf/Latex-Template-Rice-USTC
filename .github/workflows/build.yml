@@ -45,10 +45,25 @@ jobs:
       # - name: Build Template
       #   run: make
 
+
+      - name: Install ghostscript
+        run: sudo apt install ghostscript
+
+      - name: Change ImageMagick security policy
+        run: |
+          DQT='"' 
+          SRC="rights=${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
+          RPL="rights=${DQT}read\|write${DQT} pattern=${DQT}PDF${DQT}"
+          sudo sed -i "s/$SRC/$RPL/" /etc/ImageMagick-6/policy.xml
+
+      - name: Convert PDF to PNG
+        run: make gif
+
       - name: Prepare files for gh-pages
         run: |
           mkdir public
           mv main.pdf public/main.pdf
+          mv main.gif public/main.gif
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

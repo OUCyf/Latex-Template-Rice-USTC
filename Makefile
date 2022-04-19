@@ -8,18 +8,21 @@ all: main clean
 main:
 	$(LATEXMK) $(MAIN).tex
 
-clean: 
-	latexmk -c $(MAIN).tex
-	rm -r _minted-main
-	rm -r *.bbl
-
-
 ### recommend latexmk command
 # xelatex -shell-escape $(MAIN).tex
 # bibtex $(MAIN).aux
 # xelatex   -shell-escape $(MAIN).tex
 # xelatex  -shell-escape $(MAIN).tex
 
+clean: 
+	latexmk -c $(MAIN).tex
+	rm -r _minted-main
+	rm -r *.bbl
+
+gif:
+	convert -density 600 main.pdf -strip -resize @1048576 PNG8:main-%02d.png
+	convert -layers OptimizePlus -delay 75 -loop 0 main-*.png  main.gif
+	rm -r main-*.png
 
 ### tlmgr may install some package unsuccessfully, so is not recommended.
 # install_tex:

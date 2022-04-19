@@ -4,14 +4,9 @@
     "latex-workshop.latex.build.forceRecipeUsage": true,
     "latex-workshop.latex.recipes": [
         {
-            "name": "xelatex -> bibtex -> xelatex*2",
-            "tools": [
-                "xelatex",
-                "bibtex",
-                "xelatex",
-                "xelatex"
-            ]
-        },
+            "name": "latexmk -xelatex",
+            "tools": ["latexmk -xelatex"]
+        }
     ],
     "latex-workshop.latex.tools": [
         {
@@ -26,36 +21,35 @@
             ]
         },
         {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "latexmk",
+            "name": "latexmk -xelatex",
             "command": "latexmk",
             "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
+                "-xelatex",
+                "-shell-escape",  // use pygments to highlight syntax code
                 "-file-line-error",
-                "-pdf",
+                "-halt-on-error",
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "-pv-",
+                "-pvc-",
                 "-outdir=%OUTDIR%",
                 "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
+            ],
+            "env": {}
         }
-    ],
+    ]
 
+    // "latex-workshop.latex.recipes": [
+    //     {
+    //         "name": "xelatex -> bibtex -> xelatex*2",
+    //         "tools": [
+    //             "xelatex",
+    //             "bibtex",
+    //             "xelatex",
+    //             "xelatex"
+    //         ]
+    //     },
+    // ],
     // "latex-workshop.latex.tools": [
     //     {
     //         "name": "xelatex",
@@ -69,20 +63,34 @@
     //         ]
     //     },
     //     {
-    //         "name": "latexmk -xelatex",
+    //         "name": "pdflatex",
+    //         "command": "pdflatex",
+    //         "args": [
+    //             "-synctex=1",
+    //             "-interaction=nonstopmode",
+    //             "-file-line-error",
+    //             "%DOCFILE%"
+    //         ]
+    //     },
+    //     {
+    //         "name": "latexmk",
     //         "command": "latexmk",
     //         "args": [
-    //             "-xelatex",
-    //             "-file-line-error",
-    //             "-halt-on-error",
-    //             "-interaction=nonstopmode",
     //             "-synctex=1",
-    //             "-pv-",
-    //             "-pvc-",
+    //             "-interaction=nonstopmode",
+    //             "-file-line-error",
+    //             "-pdf",
     //             "-outdir=%OUTDIR%",
     //             "%DOCFILE%"
-    //         ],
-    //         "env": {}
+    //         ]
+    //     },
+    //     {
+    //         "name": "bibtex",
+    //         "command": "bibtex",
+    //         "args": [
+    //             "%DOCFILE%"
+    //         ]
     //     }
-    // ]
+    // ],
+
 }
