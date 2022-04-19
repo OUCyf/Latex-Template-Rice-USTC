@@ -27,7 +27,7 @@ jobs:
         run: pip install Pygments
 
 
-      - name: Install TexLive
+      - name: Install TexLive and make
         uses: xu-cheng/texlive-action/full@v1
         with:
           run: |

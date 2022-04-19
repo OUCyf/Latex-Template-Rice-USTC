@@ -2,43 +2,41 @@
 
 [![Build](https://github.com/OUCyf/Latex-Template-Rice-USTC/actions/workflows/build.yml/badge.svg)](https://github.com/OUCyf/Latex-Template-Rice-USTC/actions/workflows/build.yml)
 
-Please feel free to use this template for your reports.
+To build the template, you need to have **LaTeX** installed. The full LaTeX distribution are recommended in this template, and install LaTeX via [TexLive](https://github.com/scottkosty/install-tl-ubuntu) on Linux, and via [MacTex](https://www.tug.org/mactex/) on macOS.
 
 
 ## Build
 
-Click [`Use this template`](https://github.com/OUCyf/Latex-Template-Rice-USTC/generate) to generate your own template, and then git clone from your own repo.
+
+1. **Git clone**:
+    Click [`Use this template`](https://github.com/OUCyf/Latex-Template-Rice-USTC/generate) to generate your own template, and then git clone from your own repo.
 
 ```bash
 $ git clone git@github.com:OUCyf/Latex-Template-Rice-USTC.git
 ```
-
-To build the template, you need to have **LaTeX** installed. The full LaTeX distribution are recommended in this template, and install LaTeX via [TexLive](https://github.com/scottkosty/install-tl-ubuntu) on Linux, and via [MacTex](https://www.tug.org/mactex/) on macOS.
-
-We also used `minted` latex package to highlight code, which depended on the [Pygments](https://pygments.org/) (a python package) installed firstly
-
-1. Install Pygments:
+2. **Install Pygments**:
+    We also used `minted` latex package to highlight code, which depended on the [Pygments](https://pygments.org/) (a python package) installed firstly.
 
 ```bash
 $ pip install Pygments
 ```
 
-2. Build via Makefile:
+3. **Build via Makefile**:
 
 ```bash
 $ make
 ```
 
-3. Build via VSCode:
+4. **Build via VSCode**:
 
    Please check **latex-workshop.latex.tools** and **latex-workshop.latex.recipes** options in `.vscode/settings.json` file.
 
 
 ## Download
 
-Download template PDF:
+- Use via Overleaf (not the latest) [https://www.overleaf.com/project/625eb1be01c14e9933f235a6](https://www.overleaf.com/project/625eb1be01c14e9933f235a6)
 
-- [main.pdf](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf)
+- Download template PDF [main.pdf](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf)
 
 ---
 ![img2](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.gif)
