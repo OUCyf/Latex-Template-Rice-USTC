@@ -12,23 +12,20 @@ The full **LaTeX** distribution are recommended in this template, and install vi
 
     Click [`Use this template`](https://github.com/OUCyf/Latex-Template-Rice-USTC/generate) to generate your own template, and then git clone from your own repo.
 
-```bash
-$ git clone git@github.com:OUCyf/Latex-Template-Rice-USTC.git
-```
+		$ git clone git@github.com:OUCyf/Latex-Template-Rice-USTC.git
+
 
 2. **Install Pygments**:
 
     We also used `minted` latex package to highlight code, which depended on the [Pygments](https://pygments.org/) (a python package) installed firstly.
 
-```bash
-$ pip install Pygments
-```
+		$ pip install Pygments
+
 
 3. **Build via Makefile**:
 
-```bash
-$ make
-```
+		$ make
+
 
 4. **Build via VSCode**:
 
