@@ -4,24 +4,14 @@
 
 Please feel free to use this template for your reports.
 
-## Download
+
+## Build
 
 Click [`Use this template`](https://github.com/OUCyf/Latex-Template-Rice-USTC/generate) to generate your own template, and then git clone from your own repo.
 
 ```bash
 $ git clone git@github.com:OUCyf/Latex-Template-Rice-USTC.git
 ```
-
-Download template PDF:
-
-- [main.pdf](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf)
-
----
-![img2](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.gif)
-
----
-
-## Build
 
 To build the template, you need to have **LaTeX** installed. The full LaTeX distribution are recommended in this template, and install LaTeX via [TexLive](https://github.com/scottkosty/install-tl-ubuntu) on Linux, and via [MacTex](https://www.tug.org/mactex/) on macOS.
 
@@ -43,6 +33,17 @@ $ make
 
    Please check **latex-workshop.latex.tools** and **latex-workshop.latex.recipes** options in `.vscode/settings.json` file.
 
+
+## Download
+
+Download template PDF:
+
+- [main.pdf](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf)
+
+---
+![img2](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.gif)
+
+---
 
 ## Directory structure
 
