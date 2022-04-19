@@ -2,19 +2,22 @@
 
 [![Build](https://github.com/OUCyf/Latex-Template-Rice-USTC/actions/workflows/build.yml/badge.svg)](https://github.com/OUCyf/Latex-Template-Rice-USTC/actions/workflows/build.yml)
 
-To build the template, you need to have **LaTeX** installed. The full LaTeX distribution are recommended in this template, and install LaTeX via [TexLive](https://github.com/scottkosty/install-tl-ubuntu) on Linux, and via [MacTex](https://www.tug.org/mactex/) on macOS.
+The full **LaTeX** distribution are recommended in this template, and install via [TexLive](https://github.com/scottkosty/install-tl-ubuntu) on Linux, and via [MacTex](https://www.tug.org/mactex/) on MacOS.
 
 
 ## Build
 
 
 1. **Git clone**:
+
     Click [`Use this template`](https://github.com/OUCyf/Latex-Template-Rice-USTC/generate) to generate your own template, and then git clone from your own repo.
 
 ```bash
 $ git clone git@github.com:OUCyf/Latex-Template-Rice-USTC.git
 ```
+
 2. **Install Pygments**:
+
     We also used `minted` latex package to highlight code, which depended on the [Pygments](https://pygments.org/) (a python package) installed firstly.
 
 ```bash
@@ -39,7 +42,7 @@ $ make
 - Download template PDF [main.pdf](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf)
 
 ---
-![img2](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.gif)
+![img](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.gif)
 
 ---
 
@@ -50,8 +53,8 @@ $ make
     ├── .vscode                      # Compile via vscode
     ├── Makefile                     # Compile via makefile
     ├── main.tex                     # Main file
-    ├── bib
-    │   └── homework.bib             # Reference
+    ├── bib                          # Reference
+    │   └── homework.bib
     ├── setup                        # Coverpage and configuration files
     │   └── copyright.tex
     │   └── configuration.tex
@@ -68,4 +71,4 @@ $ make
 
 ## Acknowledgemnt
 
-The template refer to [Karolinska Institutet.](https://www.overleaf.com/latex/templates/thesis-template-masters-health-informatics-ki-su/dpyvvsqhygng)
+The template refers to [Karolinska Institutet.](https://www.overleaf.com/latex/templates/thesis-template-masters-health-informatics-ki-su/dpyvvsqhygng)
