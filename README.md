@@ -1,6 +1,9 @@
 # Latex Template Rice USTC
 
 [![Build](https://github.com/OUCyf/Latex-Template-Rice-USTC/actions/workflows/build.yml/badge.svg)](https://github.com/OUCyf/Latex-Template-Rice-USTC/actions/workflows/build.yml)
+[![The MIT License](https://img.shields.io/github/license/OUCyf/Latex-Template-Rice-USTC)](https://opensource.org/licenses/MIT)
+
+
 
 The full **LaTeX** distribution are recommended in this template, and install via [TexLive](https://github.com/scottkosty/install-tl-ubuntu) on Linux, and via [MacTex](https://www.tug.org/mactex/) on MacOS.
 
@@ -34,7 +37,7 @@ The full **LaTeX** distribution are recommended in this template, and install vi
 
 ## Download
 
-- Use via Overleaf (not the latest) [https://www.overleaf.com/project/625eb1be01c14e9933f235a6](https://www.overleaf.com/project/625eb1be01c14e9933f235a6)
+- Use via Overleaf (not the latest) [https://www.overleaf.com/latex/templates/latex-template-rice-ustc/tkdscxhkympd](https://www.overleaf.com/latex/templates/latex-template-rice-ustc/tkdscxhkympd)
 
 - Download template PDF [main.pdf](https://github.com/OUCyf/Latex-Template-Rice-USTC/raw/gh-pages/main.pdf)
 
